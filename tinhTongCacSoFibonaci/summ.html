@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fibonaci (num) {
+        if (num < 2) {
+            return num;
+        } else {
+            return fibonaci(num - 1) + fibonaci(num - 2);
+        }
+    }
+
+    const n = +prompt('Enter the number');
+    if (n <= 0) {
+        console.log('Number > 0')
+    } else {
+        let sum = 0;
+        for (let i = 0; i < n; i++) {
+            console.log(fibonaci(i))
+            sum += fibonaci(i)
+        }
+        console.log('sum of number is: ' + sum)
+    }
+
+</script>
+</body>
+</html>
